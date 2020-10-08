@@ -11,7 +11,7 @@ pipeline {
         stage('Shared library') {
             steps {
                 script {
-                    echo jenkinsDate.getCurrentDate()
+                    echo jenkinsDate.getTime()
                 }
             }
         }
