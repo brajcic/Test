@@ -1,0 +1,14 @@
+import java.text.SimpleDateFormat
+
+class Datum {
+    String getSimpleDate() {
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+        Date date = new Date()
+
+        String time = simpleDateFormat.format(date)
+
+
+        return  time
+    }
+}
