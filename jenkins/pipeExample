@@ -15,6 +15,11 @@ pipeline {
                 }
             }
         }
+        stage('Call another job)' {
+            steps {
+                build job: 'simple-pipe'
+            }
+        }
         stage('Done') {
             steps {
                 echo 'Done'
