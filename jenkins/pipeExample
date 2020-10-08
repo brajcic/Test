@@ -15,7 +15,7 @@ pipeline {
                 }
             }
         }
-        stage('Call another job)' {
+        stage('Call another job') {
             steps {
                 build job: 'simple-pipe'
             }
