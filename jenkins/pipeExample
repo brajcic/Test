@@ -23,7 +23,7 @@ pipeline {
         stage('Git cloning') {
             steps {
                 script {
-                            git_commands.gitClone()
+                            echo git_commands.gitClone()
                 }
             }
 
