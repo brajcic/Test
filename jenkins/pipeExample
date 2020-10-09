@@ -21,9 +21,12 @@ pipeline {
             }
         }
         stage('Git cloning') {
-            script {
-                git_commands.gitClone()
+            steps {
+                script {
+                            git_commands.gitClone()
+                }
             }
+
         }
         stage('Done') {
             steps {
