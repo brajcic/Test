@@ -26,7 +26,13 @@ pipeline {
                             echo git_commands.gitClone()
                 }
             }
-
+        }
+        stage('Git branching') {
+            steps {
+                script {
+                    git_commands.CreateBranch()
+                }
+            }
         }
         stage('Done') {
             steps {
