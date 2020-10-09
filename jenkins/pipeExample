@@ -30,7 +30,7 @@ pipeline {
         stage('Git branching') {
             steps {
                 script {
-                    git_commands.CreateBranch()
+                    git_commands.createBranch()
                 }
             }
         }
