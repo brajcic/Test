@@ -20,6 +20,11 @@ pipeline {
                 build job: 'simple-pipe'
             }
         }
+        stage('Git cloning') {
+            script {
+                git_commands.gitClone()
+            }
+        }
         stage('Done') {
             steps {
                 echo 'Done'
