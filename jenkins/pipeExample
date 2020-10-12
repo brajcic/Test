@@ -27,7 +27,11 @@ pipeline {
                 }
             }
         }
-
+        stage('Git clone private') {
+            steps {
+                 git ([url: 'https://github.com/brajcic/private_rep.git', branch: 'master', credentialsId: 'Github']
+            }
+        }
         stage('Done') {
             steps {
                 echo 'Done'
