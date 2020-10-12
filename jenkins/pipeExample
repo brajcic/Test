@@ -27,13 +27,7 @@ pipeline {
                 }
             }
         }
-        stage('Git branching') {
-            steps {
-                script {
-                    git_commands.createBranch()
-                }
-            }
-        }
+
         stage('Done') {
             steps {
                 echo 'Done'
