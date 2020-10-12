@@ -34,8 +34,8 @@ pipeline {
         }
         stage('Maven commands') {
             steps {
-                sh 'mkdir proba'
-                //sh 'cd /home/brajcic/IdeaProjects/maven_test'
+                sh 'cd'
+                sh 'cd /home/brajcic/IdeaProjects/maven_test'
                 script {
                     maven_commands.installMaven()
                 }
