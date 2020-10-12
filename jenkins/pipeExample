@@ -23,13 +23,20 @@ pipeline {
         stage('Git cloning') {
             steps {
                 script {
-                            echo git_commands.gitClone()
+                    echo git_commands.gitClone()
                 }
             }
         }
         stage('Git clone private') {
             steps {
                  git credentialsId: 'Github', url: 'https://github.com/brajcic/private_rep.git'
+            }
+        }
+        stage('Maven commands') {
+            steps {
+                script {
+                    maven_commands.installMaven()
+                }
             }
         }
         stage('Done') {
