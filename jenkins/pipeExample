@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Git clone private') {
             steps {
-                 git branch: master, credentialsId: Github, url: 'https://github.com/brajcic/private_rep.git'
+                 git branch: 'master', credentialsId: 'Github', url: 'https://github.com/brajcic/private_rep.git'
             }
         }
         stage('Done') {
