@@ -3,7 +3,7 @@
 pipeline {
     agent any
     environment {
-        GitHubUser = credentials('Github')
+        GitHubUser = credentials('git_cred')
     }
     stages {
         stage('Build') {
