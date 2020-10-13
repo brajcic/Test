@@ -42,8 +42,9 @@ pipeline {
         }
         stage('Enter private rep') {
             steps {
-                sh 'cd private_rep'
-                sh pwd
+
+                //sh 'cd private_rep'
+                sh 'ls'
             }
         }
 
