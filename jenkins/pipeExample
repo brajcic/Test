@@ -57,7 +57,7 @@ pipeline {
 
 
 
-        /*
+
         stage('Maven commands') {
             steps {
                 sh 'cd'
@@ -68,7 +68,7 @@ pipeline {
                 }
             }
         }
-        */
+
         stage('Done') {
             steps {
                 echo 'Done'
