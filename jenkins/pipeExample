@@ -62,7 +62,7 @@ pipeline {
             steps {
                 sh 'cd'
                 sh 'cd /home/brajcic/IdeaProjects/maven_test'
-                sh 'mvn clean install'
+                sh 'ls'
                 /*script {
                     maven_commands.installMaven()
                 }*/
