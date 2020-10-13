@@ -33,11 +33,21 @@ pipeline {
         }
         stage('Git clone private') {
             steps {
-                 //git credentialsId: 'Github', url: 'https://github.com/brajcic/private_rep.git'
-                 //git 'https://$GitHubUser_USR:$GitHubUser_PWS@github.com/brajcic/private_rep.git'
-                 git branch: 'main',
-                     credentialsId: 'Github',
-                     url: 'https://github.com/brajcic/private_rep.git'
+
+                // git branch: 'main',
+                //     credentialsId: 'Github',
+                //     url: 'https://github.com/brajcic/private_rep.git'
+
+                scm: ([
+                    $class: 'GitSCM',
+                    userRemoteConfigs: [[credentialsId:'Github'', url: 'https://github.com/brajcic/private_rep.git']],
+                    branches: [[name: 'main']]
+
+
+
+                ])
+
+
             }
         }
         stage('Enter private rep') {
