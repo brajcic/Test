@@ -40,6 +40,15 @@ pipeline {
                      url: 'https://github.com/brajcic/private_rep.git'
             }
         }
+        stage('Enter private rep') {
+            steps {
+                sh 'cd private_rep'
+                sh pwd
+            }
+        }
+
+
+
         /*
         stage('Maven commands') {
             steps {
