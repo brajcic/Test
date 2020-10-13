@@ -32,6 +32,7 @@ pipeline {
                  git credentialsId: 'Github', url: 'https://github.com/brajcic/private_rep.git'
             }
         }
+        /*
         stage('Maven commands') {
             steps {
                 sh 'cd'
@@ -42,6 +43,7 @@ pipeline {
                 }
             }
         }
+        */
         stage('Done') {
             steps {
                 echo 'Done'
