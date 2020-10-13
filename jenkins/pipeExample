@@ -40,7 +40,7 @@ pipeline {
 
                 scm: ([
                     $class: 'GitSCM',
-                    userRemoteConfigs: [[credentialsId:'Github'', url: 'https://github.com/brajcic/private_rep.git']],
+                    userRemoteConfigs: [[credentialsId:'Github', url: 'https://github.com/brajcic/private_rep.git']],
                     branches: [[name: 'main']]
 
 
