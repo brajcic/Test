@@ -2,6 +2,9 @@
 
 pipeline {
     agent any
+    environment {
+        GitHubUser = credentials('Github')
+    }
     stages {
         stage('Build') {
             steps {
@@ -31,11 +34,7 @@ pipeline {
         stage('Git clone private') {
             steps {
                  //git credentialsId: 'Github', url: 'https://github.com/brajcic/private_rep.git'
-                 withCredentials([usernameColonPassword(credentialsId: 'Github', variable: 'cred')]) {
-                    sh '''
-                        set +x
-                        curl -u "$cred" https://github.com/brajcic/private_rep.git > output
-                 }
+                 git 'https:$GitHubUser_USR::$GitHubUser_PWS//github.com/brajcic/private_rep.git'
             }
         }
         /*
