@@ -22,6 +22,7 @@ pipeline {
         }
         stage('Git cloning') {
             steps {
+                git 'https://github.com/brajcic/groovy_test.git'
                 script {
                     echo git_commands.gitClone()
                 }
