@@ -1,0 +1,32 @@
+// sum: + substract: - product: * divide: /
+// create new Jenkins job with 3 params
+/*
+    first param -> firstNumber
+    second param -> secondNumber
+    third param -> operation
+*/
+
+pipeline {
+    agent any
+    stages {
+        stage('First stage') {
+            steps {
+                script {
+                    if (params.OPERATION == "sum") {
+                        println(params.FIRST_NUMBER.toInteger() + params.SECOND_NUMBER.toInteger())
+                    } else if (params.OPERATION == "sub") {
+                        println(params.FIRST_NUMBER.toInteger() - params.SECOND_NUMBER.toInteger())
+                    } else if (params.OPERATION == "product") {
+                        println(params.FIRST_NUMBER.toInteger() * params.SECOND_NUMBER.toInteger())
+                    } else {
+                        println(params.FIRST_NUMBER.toInteger() / params.SECOND_NUMBER.toInteger())
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+
+
+
