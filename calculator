@@ -9,7 +9,7 @@
 pipeline {
     agent any
     stages {
-        stage('First stage') {
+        stage('First stage bla') {
             steps {
                 script {
                     if (params.OPERATION == "sum") {
