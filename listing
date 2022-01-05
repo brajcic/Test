@@ -8,7 +8,7 @@ pipeline {
                 }
             }
             post {
-                always {
+                success {
                     
                         echo "Success!"
                     
@@ -18,7 +18,10 @@ pipeline {
         stage('Second stage') {
             steps {
                 script {
-                    echo "Goodbye"
+                    println(params.CHECKBOX)
+                    println(params.CHOICE)
+                    println(params.PASS)
+                    println(params.STRING)
                 }
             }
         }
